@@ -62,7 +62,7 @@ This script also uses BioPython.
 
 The last two steps assume you are using BLAST, either locally or online at NCBI, to find identity matches for your otu consensus sequences.  You may choose to use a different database such as UNITE for some projects.  We have so far used BLAST at NCBI for greatest breadth of coverage.
 
-10.    Run  a BLAST search with the BC#_filename_consensi file for each barcode set and download the output as an xml file.  Do not use the xml2 download options as BioPython does not work with that format.
+10.    Do a BLAST search with the BC#_filename_consensi file for each barcode set and download the output as an xml file.  Do not use the xml2 download options as BioPython does not work with that format.
 
-11.  	 Run the downloaded xml file (which saves as a .txt file) through the script Top4_BLASTXMLhits_V3.py to create a tab delimited text file that is easily imported into Excel to display the results.  The script will output a hit in 4 BLAST fields, the hit with highest bit score, the hit with highest E value, the hit with longest alignment, and the hit with highest %identity match.  The % identity for each of these hits is also listed.
+11.  	 Process the downloaded xml file (which saves as a .txt file) through the script Top4_BLASTXMLhits_V3.py to create a tab delimited text file that is easily imported into Excel to display the results.  The script will output a hit in 4 BLAST fields, the hit with highest bit score, the hit with highest E value, the hit with longest alignment, and the hit with highest %identity match.  The % identity for each of these hits is also listed.
 The accuracy of results is mainly limited by the available database contents.  If you could ID a species of fungus with a full length Sanger ITS sequence in your database search you can probably get the same result with this procedure.
