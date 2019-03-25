@@ -54,7 +54,7 @@ You must remove the tab and replace it with an underline like this, >U68686_Otu0
 Your directory will now copntain an individual fasta file for each otu, where otu 1 will be the largest file and the other otus will be smaller.  Some ways down the list the higher number otu fasta files may contain only one sequence.  We find that otu's with less than 5 sequences are not worth processing further as they do not yield a highly accurate consensus sequence.
 
 8.	Align the sequences within each otu using mafft, see step 3.  This can step be done on a desktop computer, but be sure to first move the large multi-fasta file out of the directory or mafft will start a process with very large RAM requirements and will probably crash on the desktop PC.  In the end you will have a directory containing a fasta file for each otu and an alignment file for each otu.
-For the next step the top level working directory should only contain the alignment files.  Before starting step 9 create a subdirectory for the individual otu fasta files and move them into it.
+For the next step the working directory should only contain the alignment files.  Before starting step 9 create a new directory for the individual otu fasta files and move them into it.
 
 9.	Find the un-gapped consensus sequence for each otu using the OTU_UnGapCons_v4.py python script.  This will write all the consensus sequences to a new multi-fasta text file called BC#_Otu_consensi and also saves individual fasta files for each otu.  The number of sequences in the otus will now be added to the fasta headers in a way that is easily handled in Excel in the final output.
 This script also uses BioPython.
